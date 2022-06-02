@@ -7,11 +7,19 @@ const limp = document.querySelector("#limpiar");
 const guardar = document.querySelector("#guardar");
 const all = document.querySelector("#todos");
 
+
+/*VALIDACIOON DE CAMPO*/
+// function vacio(menj, palabra){
+//     if(palabra.includes('')){
+//         return menj;
+//     }
+// }
+
 function solution(array) {
     for(let i = 0; i < array.length; i++){
         let palabra = array[i].split('').reverse().join('')
-        let label = document.createElement("label");
-        label.textContent = i + " "+ palabra;
+        let label = document.createElement("p");
+        label.textContent =  palabra;
         formulario1.appendChild(label);
     }
 }
@@ -23,10 +31,21 @@ inv.addEventListener("click" , function(e){
     let invertir = palabra.split('').reverse().join('');
     console.log(invertir);
     result.textContent = invertir;
+
+    if(palabra == ""){
+        result.textContent = "Debe ingresar un valor valido";
+        setTimeout(()=>{
+            setInterval("location.reload()",4000);
+            result.remove();
+            window.location.reload();
+        },3000)    
+    }
 });
 
 limp.addEventListener("click" , function(){
-    
+    formulario1.reset();
+    result.textContent="";
+    array.splice(0, array.length);
 });
 
 guardar.addEventListener("click" , function(e){

@@ -91,11 +91,11 @@ var arreglo = [1, 2 , 3]; //ARREGLO
 
 
 /*------- for in -----------*/
-//  const numbers = [45, 4, 9, 16, 25];
-//  let txt = "";
-//  for (let x in numbers) {
-//    txt += numbers[x] + "<hr>"; //puedes poner cualquier etiqueta para diferenciar 
-//  }
-//  document.write(txt);
-//  console.log(txt); 
+// const numbers = [45, 4, 9, 16, 25];
+// let txt = "";
+// for (let x in numbers) {
+//   txt += numbers[x] + "<hr>"; //puedes poner cualquier etiqueta para diferenciar 
+// }
+// document.write(txt);
+// console.log(txt); 
 
